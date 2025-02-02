@@ -96,6 +96,7 @@ export default function Home() {
   const startQuiz = () => {
     if (!quizData) return;
     setGameStarted(true);
+    setSelectedAnswer(null);
     setAnswers(quizData.questions[currentQuestion].options.map((option, index) => ({
       id: `option-${index}`,
       content: option.description // Use the description property
@@ -130,7 +131,7 @@ export default function Home() {
       } else {
         setShowResults(true);
       }
-    }, 2000);
+    }, isAnswerCorrect ? 2000 : 5000);
   };
 
   if (loading) {
@@ -242,7 +243,7 @@ export default function Home() {
                 <XCircle className="w-6 h-6 mr-2 text-red-600" />
               )}
               <span className="font-medium">
-                {isCorrect ? 'Correct!' : `Incorrect. The correct answer is "${quizData.questions[currentQuestion].correct_answer}"`}
+                {isCorrect ? 'Correct!' : `Incorrect. The correct answer is "${quizData.questions[currentQuestion].detailed_solution}"`}
               </span>
             </div>
           </motion.div>

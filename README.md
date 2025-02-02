@@ -2,6 +2,14 @@
 
 A modern, interactive quiz application built with Next.js featuring drag-and-drop functionality and gamification elements.
 
+# Screenshots
+![My Image](screenshots/1st-image.jpg)
+![My Image](screenshots/2nd-image.jpg)
+![My Image](screenshots/3rd-image.jpg)
+![My Image](screenshots/4th-image.jpg)
+![My Image](screenshots/5th-image.jpg)
+![My Image](screenshots/6th-image.jpg)
+
 ## Features
 
 - Interactive quiz interface with drag-and-drop answer arrangement
